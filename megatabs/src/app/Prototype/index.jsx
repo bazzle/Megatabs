@@ -336,7 +336,7 @@ export default function Prototype() {
             <span className={styles.trafficDot} style={{ background: "#FEBC2E" }} />
             <span className={styles.trafficDot} style={{ background: "#28C840" }} />
           </div>
-          <span className={styles.titleText}>Megatabs — Prototype</span>
+          <span className={styles.titleText}>MegaTabs — Prototype</span>
           <div style={{ width: 52 }} />
         </div>
 
