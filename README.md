@@ -1,4 +1,4 @@
-# Megatabs v1
+# Megatabs
 
 Introducing Megatabs. How I've always imagined browser tabbing should work. With parent/child relationships.
 
@@ -27,4 +27,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
