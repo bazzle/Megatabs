@@ -1,0 +1,456 @@
+$font-main: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-mono: 'SF Mono', 'Fira Code', monospace;
+
+.outer {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.toastArea {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast {
+  background: #333;
+  color: #ccc;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.shell {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: $font-main;
+  font-size: 13px;
+  color: #e0e0e0;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.titleBar {
+  height: 36px;
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  user-select: none;
+}
+
+.trafficLights {
+  display: flex;
+  gap: 7px;
+}
+
+.trafficDot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.titleText {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.parentRow {
+  display: flex;
+  align-items: flex-end;
+  padding: 6px 8px 0;
+  background: #141414;
+  gap: 2px;
+  border-bottom: 1px solid #2a2a2a;
+  position: relative;
+  z-index: 2;
+}
+
+.parentTab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px 8px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  background: #1e1e1e;
+  border: 1px solid transparent;
+  border-bottom: none;
+  position: relative;
+  transition: background 0.15s;
+  max-width: 180px;
+  min-width: 0;
+
+  &.active {
+    background: #2a2a2a;
+    border: 1px solid #333;
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: -1px;
+    z-index: 3;
+  }
+}
+
+.tabIcon {
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.tabTitle {
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ccc;
+  font-weight: 400;
+}
+
+.childIndicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0 2px;
+  opacity: 0.4;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.connectorNub {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  border: 2px solid #333;
+  z-index: 5;
+}
+
+.newTabBtn {
+  background: none;
+  border: 1px solid transparent;
+  color: #666;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 10px 6px;
+  border-radius: 8px 8px 0 0;
+  line-height: 1;
+}
+
+.childRowContainer {
+  overflow: hidden;
+  transition: height 0.25s ease;
+  background: #1a1a1a;
+  position: relative;
+  z-index: 1;
+}
+
+.childRow {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.childGroup {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: margin-left 0.2s ease;
+}
+
+.childTab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #222;
+  transition: background 0.15s;
+  max-width: 160px;
+  min-width: 0;
+
+  &.active {
+    background: #2e2e2e;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.childTabTitle {
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #aaa;
+}
+
+.closeBtnSmall {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0 1px;
+  opacity: 0.4;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.emptyChildRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.emptyChildText {
+  color: #444;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.addressBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #1e1e1e;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.lockIcon {
+  font-size: 11px;
+}
+
+.urlText {
+  font-size: 12px;
+  color: #888;
+  font-family: $font-mono;
+}
+
+.viewport {
+  height: 340px;
+  overflow: auto;
+  background: #1f1f1f;
+}
+
+.pageContent {
+  padding: 28px 32px;
+}
+
+.pageHeading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e8e8e8;
+  margin: 0 0 20px;
+  letter-spacing: -0.3px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkItem {
+  padding: 12px 16px;
+  background: #262626;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.pageLink {
+  color: #6CB4EE;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.linkMeta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.actionLabel {
+  font-size: 10px;
+  color: #666;
+  font-weight: 500;
+}
+
+.actionDesc {
+  font-size: 10px;
+  color: #555;
+
+  &.highlight {
+    color: #6CB4EE;
+  }
+}
+
+.kbdGroup {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  font-size: 9px;
+  font-family: $font-mono;
+  background: #333;
+  border-radius: 3px;
+  color: #888;
+  border: 1px solid #444;
+
+  &.highlight {
+    background: #1a2a3a;
+    color: #6CB4EE;
+    border: 1px solid #2a3a4a;
+  }
+}
+
+.kbdPlus {
+  font-size: 9px;
+  color: #555;
+}
+
+.childPageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.placeholderBlock {
+  height: 12px;
+  border-radius: 4px;
+  background: #2a2a2a;
+  width: 100%;
+}
+
+.childPageNote {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #555;
+  font-style: italic;
+}
+
+.instructions {
+  padding: 10px 16px;
+  background: #141414;
+  border-top: 1px solid #222;
+}
+
+.instructionGrid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 14px;
+  align-items: center;
+}
+
+.instructionKey {
+  font-size: 11px;
+  color: #666;
+  font-weight: 500;
+  text-align: right;
+}
+
+.instructionVal {
+  font-size: 11px;
+  color: #555;
+
+  &.highlight {
+    color: #6CB4EE;
+  }
+}
+
+.kbdInline {
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 10px;
+  font-family: $font-mono;
+  background: #252525;
+  border-radius: 3px;
+  color: #777;
+  border: 1px solid #333;
+}
+
+.contextBadge {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #444;
+  text-align: right;
+}
+
+.resetRow {
+  display: flex;
+  justify-content: center;
+  padding: 14px 0 4px;
+}
+
+.resetBtn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #555;
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: $font-main;
+  transition: all 0.15s;
+
+  &:hover {
+    background: #333;
+    color: #ccc;
+  }
+}
+
+.childTabIcon {
+  font-size: 11px;
+}
