@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "MegaTabs",
-  description: "MegaTabs prototype",
+  description: "MegaTabs prototype v1",
 };
 
 export default function RootLayout({ children }) {

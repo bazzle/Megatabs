@@ -6,6 +6,7 @@ export default function Home() {
 		<div className={styles.page}>
 			<main className={styles.main}>
 				<h1 className={styles.mainHeading}>MegaTabs</h1>
+				<div className={styles.intro}>Prototype v1</div>
 				<div className={styles.prototype}>
 					<Prototype />
 				</div>
