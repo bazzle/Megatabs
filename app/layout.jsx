@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./main.scss";
 
 export const metadata = {
   title: "MegaTabs",
