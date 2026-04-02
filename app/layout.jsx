@@ -1,4 +1,5 @@
-import "./main.scss";
+import "./main.scss"
+import AppThemeProvider from '@/style-library/context/ThemeProvider'
 
 export const metadata = {
   title: "MegaTabs",
@@ -7,9 +8,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behaviour="smooth" suppressHydrationWarning>
       <body>
-        {children}
+		<AppThemeProvider>
+        	{children}
+		</AppThemeProvider>
       </body>
     </html>
   );
