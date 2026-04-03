@@ -506,7 +506,7 @@ export default function Prototype() {
       </div>
 
       <div className={styles.resetRow}>
-        <button className={styles.resetBtn} onClick={resetAll}>↺ Reset prototype</button>
+        <button className="button" onClick={resetAll}>Reset prototype</button>
       </div>
     </div>
   );
