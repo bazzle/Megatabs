@@ -34,13 +34,13 @@ $font-mono: 'SF Mono', 'Fira Code', monospace;
   --text-heading: #e8e8e8;
   --text-tab: #ccc;
   --text-childtab: #aaa;
-  --text-dim: #666;
-  --text-dimmer: #555;
-  --text-dimmest: #444;
+  --text-dim: #aaaaaa;
+  --text-dimmer: #8a8a8a;
+  --text-dimmest: #848484;
   --text-close: #999;
   --text-url: #888;
   --text-kbd: #888;
-  --text-kbdinline: #777;
+  --text-kbdinline: #8d8d8d;
   --text-kbdplus: #555;
   --text-link: #6CB4EE;
   // Shadows
@@ -536,6 +536,7 @@ $font-mono: 'SF Mono', 'Fira Code', monospace;
   display: flex;
   justify-content: center;
   padding: 14px 0 4px;
+  margin-top: 60px;
 }
 
 .childTabIcon {
