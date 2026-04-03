@@ -140,7 +140,6 @@ $font-mono: 'SF Mono', 'Fira Code', monospace;
   font-family: $font-main;
   font-size: 16px;
   color: var(--text-primary);
-  box-shadow: 0 24px 80px var(--shadow-shell);
   position: relative;
 }
 
@@ -537,23 +536,6 @@ $font-mono: 'SF Mono', 'Fira Code', monospace;
   display: flex;
   justify-content: center;
   padding: 14px 0 4px;
-}
-
-.resetBtn {
-  background: transparent;
-  border: 1px solid var(--border-resetbtn);
-  color: var(--text-resetbtn);
-  font-size: 14px;
-  padding: 6px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: $font-main;
-  transition: all 0.15s;
-
-  &:hover {
-    background: var(--bg-resetbtn-hover);
-    color: var(--text-resetbtn-hover);
-  }
 }
 
 .childTabIcon {
